@@ -17,11 +17,11 @@ export default function DashboardPage() {
   const [state, dispatch] = useReducer(dashboardReducer, initialState);
 
   const screens = [
-    // { component: ScoreScreen, props: {}, duration: 20000 },
+    { component: ScoreScreen, props: {}, duration: 20000 },
     { component: RankingScreen, props: {}, duration: 15000 },
-    // { component: TeamScreen, props: { teamId: "id1" }, duration: 30000 },
-    // { component: TeamScreen, props: { teamId: "id2" }, duration: 30000 },
-    // { component: TeamScreen, props: { teamId: "id3" }, duration: 30000 },
+    // { component: TeamScreen, props: { teamId: "6a26bfcf5e11d9941410af8d" }, duration: 60000 },
+    // { component: TeamScreen, props: { teamId: "6a26bfcf5e11d9941410af8e" }, duration: 60000 },
+    // { component: TeamScreen, props: { teamId: "6a26bfcf5e11d9941410af8f" }, duration: 60000 },
   ];
 
   const CurrentScreen = screens[state.currentIndex].component;

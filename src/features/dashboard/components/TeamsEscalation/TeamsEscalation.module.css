@@ -1,0 +1,32 @@
+.container {
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.video_comemoracao {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video_name {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.video_job {
+  position: absolute;
+  bottom: 5%;
+  left: 26%;
+  color: white;
+  text-transform: uppercase;
+}

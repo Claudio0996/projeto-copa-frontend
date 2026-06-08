@@ -3,10 +3,26 @@ import RankingList from "../RankingList/RankingList";
 import styles from "./RankingScreen.module.css";
 
 export default function RankingScreen() {
+  const today = new Date();
+  const day = today.getDay() || 7;
+  const start = today.getDate() - day + 1;
+
+  const startOfWeek = new Date(today);
+  startOfWeek.setDate(start);
+  startOfWeek.setHours(0, 0, 0, 0);
+
+  const finalOfWeek = new Date(today);
+  finalOfWeek.setDate(start + 4);
+  finalOfWeek.setHours(23, 59, 59, 999);
+
+  console.log(startOfWeek.getDate());
+
   const { rank } = useRanking();
   return (
     <div className={styles.container}>
-      <h2 className={styles.ranking_title}>Artilheiros da semana</h2>
+      <h2 className={styles.ranking_title}>
+        Artilheiros da semana ({startOfWeek.getDate()} a {finalOfWeek.getDate()}/06)
+      </h2>
       <div className={styles.ranking_container}>
         <div className={styles.content_container}>
           <div className={styles.sales_container}>

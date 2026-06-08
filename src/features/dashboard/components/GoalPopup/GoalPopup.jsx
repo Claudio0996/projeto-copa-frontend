@@ -29,7 +29,7 @@ export default function GoalPopup({ event, onClose }) {
     if (statePopup === "info") {
       timer = setTimeout(() => {
         resetPopup();
-      }, 5000);
+      }, 10000);
     }
     return () => clearTimeout(timer);
   }, [statePopup]);
@@ -48,19 +48,24 @@ export default function GoalPopup({ event, onClose }) {
             {event.vendor.name}
             <span className={styles.vendor_job}> ({event.vendor.job})</span>
           </h3>
-          <div className={styles.assist_container}>
-            <div className={styles.image_container}>
-              <img src={event.sdrId.imageUrl} className={styles.image} />
-            </div>
+          {event.sdrId && (
+            <div className={styles.assist_container}>
+              <div className={styles.image_container}>
+                <img src={event.sdrId.imageUrl} className={styles.image} />
+              </div>
 
-            <div className={styles.assist_info}>
-              <p className={styles.assist_title}>Assitência</p>
-              <h5 className={styles.assist_name}>
-                {event.sdrId.name}
-                <span className={styles.assist_job}> ({event.sdrId.job})</span>
-              </h5>
+              <div className={styles.assist_info}>
+                <p className={styles.assist_title}>AssiStência</p>
+                <h5 className={styles.assist_name}>
+                  {event.sdrId.name}
+                  <span className={styles.assist_job}> ({event.sdrId.job})</span>
+                </h5>
+              </div>
             </div>
-          </div>
+          )}
+        </div>
+        <div className={styles.video_container}>
+          <video src={event?.vendor?.videoGol} autoPlay muted loop className={styles.video_comemoracao}></video>
         </div>
       </div>
     );

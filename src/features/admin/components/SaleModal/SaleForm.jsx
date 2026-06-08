@@ -57,7 +57,7 @@ export default function SaleForm({ sale, onClose }) {
 
       <label className={styles.label}>
         Assistente
-        <select name="sdrId" value={formData.sdrId} onChange={handleChange} className={styles.select} required>
+        <select name="sdrId" value={formData.sdrId} onChange={handleChange} className={styles.select}>
           <option value="">Selecione um assistente</option>
           {sdrs?.map((sdr) => (
             <option key={sdr._id} value={sdr._id}>

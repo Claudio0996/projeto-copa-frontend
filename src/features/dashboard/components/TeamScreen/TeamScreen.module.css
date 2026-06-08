@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: 732px;
+  padding: 49px 49px;
+  position: relative;
+  border: 4px solid #fff;
+  border-radius: 30px;
+  background: #01031acc;
+}
+
+.widget {
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  padding: 13px 29px;
+  font-size: 32px;
+  font-weight: 800;
+  left: 5%;
+  top: -3%;
+  border-radius: 50px;
+}
+
+.teamImg {
+  width: 60%;
+}

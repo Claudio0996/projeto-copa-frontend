@@ -97,3 +97,9 @@ export const getWeeklyRanking = async () => {
   const response = await instance.get("/analytics/ranking?period=week");
   return response.data;
 };
+
+export const getTeamEscalation = async (teamId) => {
+  const response = await instance.get(`/analytics/teams/${teamId}`);
+
+  return response.data;
+};

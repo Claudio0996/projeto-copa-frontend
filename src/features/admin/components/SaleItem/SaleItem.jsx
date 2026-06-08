@@ -6,7 +6,7 @@ export default function SaleItem({ sale, onEdit }) {
     <li className={styles.item_container}>
       <section className={styles.sale_vendor}>
         <p className={styles.vendor_name}>Vendedor: {sale.vendor?.name}</p>
-        <p className={styles.assistant_name}>Assistente: {sale.sdrId?.name}</p>
+        {sale?.sdrId && <p className={styles.assistant_name}>Assistente: {sale.sdrId?.name}</p>}
       </section>
 
       <section className={styles.date_container}>Gol feito em: {date.toLocaleString("pt-BR")}</section>

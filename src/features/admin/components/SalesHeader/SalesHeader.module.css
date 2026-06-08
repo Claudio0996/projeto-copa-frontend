@@ -1,6 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  color: white;
 }
 
 .header_container {
@@ -11,6 +12,7 @@
 
 .header_title {
   font-size: 32px;
+  color: white;
 }
 
 .header_button {

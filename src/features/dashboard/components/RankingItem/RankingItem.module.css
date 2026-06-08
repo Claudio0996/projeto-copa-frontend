@@ -1,0 +1,40 @@
+.ranking_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  color: white;
+  padding: 19px 25px;
+}
+
+.position,
+.person_name {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.image_container {
+  max-height: 82px;
+  max-width: 82px;
+  overflow: hidden;
+  border: 3px solid #e59900;
+  border-radius: 80px;
+  object-position: bottom;
+}
+
+.image {
+  width: 100%;
+  background: #fff;
+}
+
+.person_job {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.person_goals {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+}

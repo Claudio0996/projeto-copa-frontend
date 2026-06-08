@@ -1,0 +1,70 @@
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  align-items: center;
+}
+
+.card_title {
+  font-size: 38px;
+  font-weight: 800;
+  color: white;
+}
+
+.card_content {
+  background-color: white;
+  color: #000;
+  width: 267px;
+  height: 376px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.card_camiseta {
+  position: relative;
+  top: -5%;
+  max-width: 227px;
+}
+
+.card_teamName {
+  font-size: 32px;
+  font-weight: 800;
+  color: #04043a;
+}
+
+.divider {
+  height: 2px;
+  width: 80%;
+  padding: 1px 0;
+  background-color: #d9d9d9;
+}
+
+.card_goals {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.score {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 100px;
+  color: #04043a;
+  text-shadow:
+    -4px -4px 0 #fff,
+    4px -4px 0 #fff,
+    -4px 4px 0 #fff,
+    4px 4px 0 #fff,
+    0 -4px 0 #fff,
+    0 4px 0 #fff,
+    -4px 0 0 #fff,
+    4px 0 0 #fff;
+  position: relative;
+  top: 1%;
+  height: max-content;
+  line-height: 1;
+}

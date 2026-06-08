@@ -1,0 +1,38 @@
+.item_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.sale_vendor {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vendor_name {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.assistant_name {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.styles.date_container {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.button_edit {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #002c37;
+  cursor: pointer;
+}

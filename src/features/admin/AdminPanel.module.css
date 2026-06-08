@@ -1,0 +1,31 @@
+.admin_container {
+  width: 80vw;
+  height: 80vh;
+  background-color: #01031ae5;
+  border-radius: 30px;
+  padding: 40px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ranking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ranking_container {
+  display: flex;
+  gap: 50px;
+}
+
+.main_content {
+  width: 60%;
+}

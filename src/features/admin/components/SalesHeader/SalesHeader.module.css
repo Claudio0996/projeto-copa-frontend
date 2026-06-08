@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header_title {
+  font-size: 32px;
+}
+
+.header_button {
+  padding: 10px;
+  width: max-content;
+  max-height: max-content;
+  background-color: #002c37;
+  border: none;
+  border-radius: 5px;
+}

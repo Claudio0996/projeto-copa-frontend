@@ -1,0 +1,97 @@
+.modal_bg {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  border: 5px solid #fff;
+  width: 65vw;
+  height: 80vh;
+  background: #01031ae5;
+  border-radius: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 110px;
+  position: relative;
+  color: white;
+  box-sizing: border-box;
+  line-break: anywhere;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.vendor_name {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.vendor_job {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.goal_title {
+  font-size: 80px;
+  max-width: 550px;
+  text-transform: uppercase;
+}
+
+.assist_container {
+  display: flex;
+  gap: 29px;
+  align-items: center;
+}
+
+.assist_info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.assist_title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.assist_name,
+.assist_job {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.assist_job {
+  font-weight: 400;
+}
+
+.video {
+  width: 65vw;
+  height: 80vh;
+  border-radius: 50px;
+}
+
+.image_container {
+  max-height: 82px;
+  max-width: 82px;
+  overflow: hidden;
+  border: 3px solid #e59900;
+  border-radius: 80px;
+}
+
+.image {
+  width: 100%;
+  background: #fff;
+}

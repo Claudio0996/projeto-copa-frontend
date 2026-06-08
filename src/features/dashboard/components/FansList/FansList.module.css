@@ -1,0 +1,47 @@
+.info_torcedores {
+  background: #fff;
+  border-radius: 25px;
+  padding: 29px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 80%;
+}
+
+.torcedores_title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.scroll_wrapper {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.nomes {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.fanName {
+  font-size: 24px;
+  color: black;
+  text-transform: uppercase;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,18 @@
+.Farmer,
+.Vendas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.member {
+  display: flex;
+  gap: 5px;
+}

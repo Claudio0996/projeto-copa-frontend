@@ -1,6 +1,6 @@
 .modal_bg {
   position: fixed;
-  z-index: 100;
+  z-index: 9999;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
@@ -15,7 +15,7 @@
   border: 5px solid #fff;
   width: 70vw;
   height: 80vh;
-  background: #01031ae5;
+  background: #000;
   border-radius: 30px;
   display: flex;
   justify-content: space-evenly;

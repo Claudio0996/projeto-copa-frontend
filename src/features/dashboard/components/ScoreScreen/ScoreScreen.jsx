@@ -5,10 +5,22 @@ import FansList from "../FansList/FansList";
 
 export default function ScoreScreen() {
   const { scores } = useScoreBoard();
+   const today = new Date();
+  const day = today.getDay() || 7;
+  const start = today.getDate() - day + 1;
+
+  const startOfWeek = new Date(today);
+  startOfWeek.setDate(start);
+  startOfWeek.setHours(0, 0, 0, 0);
+
+  const finalOfWeek = new Date(today);
+  finalOfWeek.setDate(start + 6);
+  finalOfWeek.setHours(23, 59, 59, 999);
+
 
   return (
     <div className={styles.container}>
-      <p className={styles.widget}>Placar da semana</p>
+      <p className={styles.widget}>Placar da semana ({startOfWeek.getDate()} a {finalOfWeek.getDate()}/06)</p>
       <img src="./trofeu.png" alt="trofeu da copa" className={styles.image_float} />
       <div className={styles.info_placar}>
         <div className={styles.list_container}>

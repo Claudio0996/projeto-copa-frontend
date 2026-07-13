@@ -6,6 +6,7 @@ export default function useRanking() {
     queryKey: ["weekly-rank"],
     queryFn: getWeeklyRanking,
     placeholderData: { data: { venda: [], farm: [] } },
+    refetchInterval: 3000
   });
 
   return { rank: data.data, isPending, isError, error };

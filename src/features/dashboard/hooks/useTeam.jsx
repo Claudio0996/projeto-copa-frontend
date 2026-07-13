@@ -3,12 +3,12 @@ import { getTeamEscalation } from "../../../shared/apiClient";
 
 export default function useTeam(teamId) {
   const { data, isPending, isError, error } = useQuery({
-    queryKey: ["teams-escalation"],
+    queryKey: ["team", "escalation", teamId],
     queryFn: () => {
       return getTeamEscalation(teamId);
     },
-    placeholderData: { data: { vendors: [], sdrs: [], fans: [], videos: [] } },
+    placeholderData: { data: [] },
   });
 
-  return { info: data, isPending, isError, error };
+  return { data, isPending, isError, error };
 }

@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect, useContext } from "react";
+import { createPortal } from "react-dom";
+import { TvAudioContext } from "../../../../shared/TvAudioContext";
 
 import styles from "./GoalPopup.module.css";
 
 export default function GoalPopup({ event, onClose }) {
+  const AudioContext = useContext(TvAudioContext);
   const [statePopup, setStatePopup] = useState("video");
   let content;
-  console.log(event);
 
   function setPopupType() {
     setStatePopup("info");
@@ -17,10 +19,11 @@ export default function GoalPopup({ event, onClose }) {
   }
 
   useEffect(() => {
-    const audio = new Audio("/vinheta.mp3");
     if (event) {
+      AudioContext.current.currentTime = 0;
+      AudioContext.current.play();
       setStatePopup("video");
-      audio.play();
+      
     }
   }, [event]);
 
@@ -55,7 +58,7 @@ export default function GoalPopup({ event, onClose }) {
               </div>
 
               <div className={styles.assist_info}>
-                <p className={styles.assist_title}>AssiStência</p>
+                <p className={styles.assist_title}>Assistência</p>
                 <h5 className={styles.assist_name}>
                   {event.sdrId.name}
                   <span className={styles.assist_job}> ({event.sdrId.job})</span>
@@ -71,5 +74,9 @@ export default function GoalPopup({ event, onClose }) {
     );
   }
 
-  return <div className={styles.modal_bg}>{content}</div>;
+  return createPortal(
+    <div className={styles.modal_bg}>{content}</div>,
+    document.body
+  );
 }
+

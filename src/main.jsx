@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import AuthContextProvider from "./features/auth/context/AuthContext";
+import TvAudioContextProvider from "./shared/TvAudioContext";
 import router from "./app/Router";
 import "./index.css";
 
@@ -12,7 +13,9 @@ const queryClient = new QueryClient();
 createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
     <AuthContextProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <TvAudioContextProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </TvAudioContextProvider>  
     </AuthContextProvider>
   </QueryClientProvider>,
 );

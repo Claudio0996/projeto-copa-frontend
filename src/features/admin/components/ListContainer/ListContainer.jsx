@@ -4,6 +4,7 @@ import styles from "./ListContainer.module.css";
 import useAdminSales from "../../hooks/useAdminSales";
 import useVendors from "../../hooks/useVendors";
 import useSdrs from "../../hooks/useSdrs";
+import { transformData, exportData } from "../../../../helpers/transformationData";
 
 import SalesHeader from "../SalesHeader/SalesHeader";
 import SalesList from "../SalesList/SalesList";
@@ -14,6 +15,13 @@ export default function ListContainer() {
   const { vendors, isPeding: pendingVendors, isError: isErrorVendors, error: errorVendors } = useVendors();
   const { sdrs, isPeding, pendingSdrs, isError: isErrorSdrs, error: errorSdrs } = useSdrs();
   const { sales, isPending, isError, error } = useAdminSales();
+
+
+  function handleExport(){
+    const data = transformData(sales.data)
+    exportData(data)
+  }
+  
 
   const handleOpenCreate = () => {
     setModalState((prev) => ({ ...prev, isOpen: true }));
@@ -31,7 +39,7 @@ export default function ListContainer() {
     <>
       {modalState.isOpen && <SaleModal onCloseModal={handleClose} sale={modalState.sale} />}
       <div className={styles.container_sales}>
-        <SalesHeader totalSales={sales.total} onOpenModal={handleOpenCreate} />
+        <SalesHeader totalSales={sales.total} onOpenModal={handleOpenCreate} onExport={handleExport} />
         <section className={styles.container_overflow}>
           <div className={styles.data_container}>
             {isPending && <p>Buscando Vendas...</p>}

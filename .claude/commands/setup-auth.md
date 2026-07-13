@@ -2,11 +2,11 @@
 
 Scaffolda a estrutura completa de autenticação baseada no padrão do projeto Copa FrontEnd.
 
-O argumento opcional é a URL base da API. Se não for passado, usa `http://localhost:3000`.
+O argumento opcional é a URL base da API. Se não for passado, usa `http://192.168.1.22`.
 
 ## O que fazer
 
-**Leia os argumentos:** `$ARGUMENTS` — se o usuário passou uma URL, use-a como `baseURL` no apiClient. Caso contrário, use `http://localhost:3000`.
+**Leia os argumentos:** `$ARGUMENTS` — se o usuário passou uma URL, use-a como `baseURL` no apiClient. Caso contrário, use `http://192.168.1.22`.
 
 **Crie os seguintes arquivos exatamente como descritos abaixo, sem modificar a estrutura.**
 

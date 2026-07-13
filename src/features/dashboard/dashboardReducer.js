@@ -1,4 +1,4 @@
-const dashboardReducer = (state, action) => {
+  const dashboardReducer = (state, action) => {
   switch (action.type) {
     case "NEXT_SCREEN": {
       const nextIndex = (state.currentIndex + 1) % action.payload.total;
@@ -11,9 +11,9 @@ const dashboardReducer = (state, action) => {
       return { ...state, queue, currentEvent };
     }
     case "DEQUEUE_EVENT": {
+      const nextEvent = state.queue.length > 0 ? state.queue[0] : null;
       const queue = state.queue.slice(1);
-      const currentEvent = queue.length > 0 ? queue[0] : null;
-      return { ...state, queue, currentEvent };
+      return { ...state, queue, currentEvent: nextEvent };
     }
     default:
       return state;

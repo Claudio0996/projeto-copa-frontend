@@ -4,8 +4,11 @@ import SalesHeader from "./components/SalesHeader/SalesHeader";
 
 import styles from "./AdminPanel.module.css";
 import ListContainer from "./components/ListContainer/ListContainer";
+import useAdminRank from "./hooks/useAdminRank";
 
 export default function AdminPanel() {
+
+  const {rank} = useAdminRank()
   return (
     <section className={styles.admin_container}>
       <div className={styles.sidebar_content}>
@@ -13,8 +16,8 @@ export default function AdminPanel() {
         <div className={styles.ranking}>
           <h3>Ranking total</h3>
           <div className={styles.ranking_container}>
-            <RankingList listName="Farmer" />
-            <RankingList listName="Vendas" />
+            <RankingList listName="Farmer" list={rank.farm} />
+            <RankingList listName="Vendas" list={rank.venda}/>
           </div>
         </div>
       </div>

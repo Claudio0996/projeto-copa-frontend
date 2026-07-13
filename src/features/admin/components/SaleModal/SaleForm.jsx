@@ -12,10 +12,11 @@ export default function SaleForm({ sale, onClose }) {
   const queryClient = useQueryClient();
   const { vendors } = useVendors();
   const { sdrs } = useSdrs();
+  console.log(vendors, sdrs);
 
   const [formData, setFormData] = useState({
-    vendor: sale?.vendor._id ?? "",
-    sdrId: sale?.sdrId._id ?? "",
+    vendor: sale?.vendor?._id ?? "",
+    sdrId: sale?.sdrId?._id ?? "",
     realizedAt: sale?.realizedAt.slice(0, 16) ?? "",
   });
 

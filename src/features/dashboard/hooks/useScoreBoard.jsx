@@ -6,6 +6,7 @@ export default function useScoreBoard() {
     queryKey: ["weekly-scoreboard"],
     queryFn: getScoreBoard,
     placeholderData: { data: [] },
+    refetchInterval: 5000
   });
   return { scores: data?.data ?? [], isPending, isError, error };
 }

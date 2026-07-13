@@ -12,10 +12,10 @@ export default function RankingScreen() {
   startOfWeek.setHours(0, 0, 0, 0);
 
   const finalOfWeek = new Date(today);
-  finalOfWeek.setDate(start + 4);
+  finalOfWeek.setDate(start + 6);
   finalOfWeek.setHours(23, 59, 59, 999);
 
-  console.log(startOfWeek.getDate());
+
 
   const { rank } = useRanking();
   return (

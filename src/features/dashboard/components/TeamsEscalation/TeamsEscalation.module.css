@@ -5,13 +5,13 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 10;
 }
 
 .video_comemoracao {
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover;
+  background-image: transparent;
 }
 .video_name {
   position: absolute;

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "http://192.168.1.22:3000",
   withCredentials: true,
 });
 
@@ -47,6 +47,11 @@ export const getTotalScore = async () => {
   const response = await instance.get("/analytics/scoreboard");
   return response.data;
 };
+
+export const getTotalRanking = async() =>{
+  const response = await instance.get("/analytics/ranking");
+  return response.data;
+}
 
 export const getSales = async () => {
   const response = await instance.get("/sales/admin");
@@ -103,3 +108,21 @@ export const getTeamEscalation = async (teamId) => {
 
   return response.data;
 };
+
+export const getTotalScoreBoard = async () =>{
+  const response = await instance.get("/analytics/scoreboard");
+
+  return response.data;
+}
+
+export const getTotalSdrRanking = async () =>{
+  const response = await instance.get("/analytics/sdr-ranking");
+
+  return response.data;
+}
+
+export const getSaleByVendorId = async(vendorId) =>{
+  const response = await instance.get(`/sales/get/${vendorId}`);
+
+  return response.data;
+}

@@ -1,30 +1,43 @@
-import { useState } from "react";
+﻿import { useState, useEffect } from "react";
 import style from "./TeamsEscalation.module.css";
 
+const MAX_VIDEO_DURATION_MS = 3000;
+
 export default function TeamsEscalation({ videos }) {
-  console.log(videos);
   const [index, setIndex] = useState(0);
 
-  function handleNextIndex() {
-    setIndex((prev) => (prev + 1 >= videos.length ? 0 : prev + 1));
+  function advance() {
+    if (!videos?.length) return;
+    setIndex((prev) => (prev + 1 >= videos?.length ? 0 : prev + 1));
   }
+
+  useEffect(() => {
+    const timer = setTimeout(advance, MAX_VIDEO_DURATION_MS);
+    return () => clearTimeout(timer);
+  }, [index]);
+
+
+  if (!videos?.length) return null;
+
+  const current = videos[index];
 
   return (
     <div className={style.container}>
-      {videos && (
-        <>
-          <video
-            key={videos[index]?.vendorId}
-            src={videos[index]?.videoUrl}
-            autoPlay
-            muted
-            onEnded={handleNextIndex}
-            className={style.video_comemoracao}
-          ></video>
-          <p className={style.video_name}>{videos[index]?.name}</p>
-          <p className={style.video_job}>{videos[index]?.job}</p>
-        </>
-      )}
+      <video
+        key={current?.videoUrl}
+        src={current?.videoUrl}
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        onEnded={advance}
+        onError={advance}
+        className={style.video_comemoracao}
+      />
+      <p className={style.video_name}>{current?.name}</p>
+      <p className={style.video_job}>{current?.job}</p>
     </div>
   );
 }
+
+
